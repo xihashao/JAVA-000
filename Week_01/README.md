@@ -109,7 +109,7 @@ Constant pool:                       //常量池
          0: iconst_1                         //表示常量 1
          1: istore_1                         //1 表示本地变量表中的第三列槽位，表示将栈上的值写回到本地变量表
          2: ldc           #2                  // String spp
-         4: astore_2                           
+         4: astore_2                           //a表示对象引用                
          5: bipush        97
          7: istore_3                 
          8: iconst_0
@@ -177,4 +177,5 @@ Constant pool:                       //常量池
 
 ```
 
-
+    对字节码来说，int是最小单位（32位），byte和bool都是用int来表示（32位）
+    在编译的时候就会进行类型转换
