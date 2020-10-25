@@ -179,3 +179,22 @@ Constant pool:                       //常量池
 
     对字节码来说，int是最小单位（32位），byte和bool都是用int来表示（32位）
     在编译的时候就会进行类型转换
+
+
+#jvm 命令
+ `jps -lmv`  可打印详细信息，jps查看java进程    
+ `jinfo pid`  当前java线程jvm基本信息  
+ `jstat -gc pid 1000 1000`  按字节显示 1秒打一次，打印1000次  
+ `jstat -gcutil pid 1000 1000` 显示百分比  
+ `jmap -heap pid` 打印堆内存的配置和使用信息  
+ `jmap -histo pid` 查看哪些类占用空间最多，直方图  
+ `jmap -dump:format=b,file=hprof` dump堆内存  
+ `jstack pid ` 线程详细信息以及锁信息 可以判断死锁  
+ `jcmd pid <option>` 可以通过-help查看支持哪些指令  
+#jvm 图形化工具
+ 1.jconsole
+ 2.jvisualvm
+ 3.IDEA插件 visualGC
+ 4.jmc
+ 
+ 
